@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Criativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">DanielaAlves</div>
+        <button id="menu-toggle" class="navigation-icon" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="portfolio">
+        <div class="texto">
+            <h1>Bem-Vindo!</h1>
+            <p>Olá! Sou <span>Daniela Alves</span>, tenho 18 anos. Curso Análise e Desenvolvimento de Sistemas na FAM,
+                com conhecimentos em C, C++, HTML, CSS e JavaScript. Sou formada em Desenvolvimento Web pelo IOS
+                (Instituto da Oportunidade Social) e estou estudando Inteligência Artificial pelo IBM SkillsBuild.
+                Concluí o PROA em 2025, desenvolvendo habilidades técnicas e interpessoais. Busco oportunidades em
+                projetos desafiadores e inovadores.</p>
+            <div class="contact-icons">
+                <a href="mailto:seuemail@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/seuusuario" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/seuusuario" target="_blank" title="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/seuusuario" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+                  <a href="#mais" class="btn">Ver Mais</a>
+        </div>
+
+        <div class="imagem">
+            <img src="/assets/danichibi1.png" alt="Foto de Daniela" width="370px" />
+        </div>
+    </section>
+
+
+
+    <section id="mais" class="below-section">
+        <div>
+            <div class="section-title">Experiência</div>
+            <ul class="section-list">
+                <li><span class="star">&#9733;</span> 2022 - Social Media Asset Artist, Cloud9 Esports, Inc.</li>
+                <li><span class="star">&#9733;</span> 2022 - Background Artist, Rocket Sheep Studios</li>
+                <li><span class="star">&#9733;</span> 2019-2021 - Creatives Manager, UP Advertising Core</li>
+                <li><span class="star">&#9733;</span> 2018 - Layout Artist, Phoenix Publishing House</li>
+            </ul>
+        </div>
+        <div>
+            <div class="section-title">Educação</div>
+            <ul class="section-list">
+                <li><span class="star">&#9733;</span> 2018-2022 - Universidade X, BFA Comunicação Visual, Summa Cum
+                    Laude</li>
+                <li><span class="star">&#9733;</span> 2022 - ZTM Academy, Certificado UI/UX Design</li>
+            </ul>
+        </div>
+        <div>
+            <div class="section-title">Skills</div>
+            <div class="skills-grid">
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Digital Illustration</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Adobe Creative Suite</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Graphic Design / Layout</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Figma</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> UI Design</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Microsoft Office</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Animation / Storyboarding</div>
+                <div class="skill-item"><span class="skill-star">&#9733;</span> Communication</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="contato">
+        <h2>Contato</h2>
+        <form class="contact-form">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p style="text-align:center; margin-top:18px;">
+            Ou envie um e-mail para <a href="mailto:seuemail@email.com">seuemail@email.com</a>
+        </p>
+        <div style="text-align:center; margin-top:12px;">
+            <a href="https://github.com/seuusuario" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a> |
+            <a href="https://instagram.com/seuusuario" target="_blank">Instagram</a>
+        </div>
+    </section> -->
+
+    <footer>
+        &copy; 2024 Seu Nome. Todos os direitos reservados.
+    </footer>
+
+
+    
+    <script>
+        // Navbar responsiva
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.querySelector('nav .menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('menu-open');
+        });
+        // Fecha menu ao clicar em link (mobile)
+        document.querySelectorAll('nav .menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) menu.classList.remove('menu-open');
+            });
+        });
+    </script>
+</body>
+
+</html>
