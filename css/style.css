@@ -17,6 +17,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Okine';
+    src: url('../fontes/MADEOkineSansPERSONALUSE-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -28,7 +35,7 @@
 body {
     margin: 0;
     background: #fcf8f2;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-family: 'typewriter', serif;
     color: #222;
 }
 
@@ -53,11 +60,16 @@ body {
 
 
 .section-title {
+
     font-family: 'Klore', serif;
     color: #e94f37;
     font-size: 2rem;
     margin-bottom: 18px;
     margin-top: 0;
+}
+
+.section-title {
+    font-family: 'Klore', serif;
 }
 
 .section-list {
@@ -188,6 +200,20 @@ body {
     margin-bottom: 18px;
     margin-top: 0;
 }
+
+.section-title.exp {
+    font-family: 'Okine';
+}
+
+.section-title.skills {
+    font-family: 'Okine';
+}
+
+.section-title.edu {
+    font-family: 'Okine';
+}
+
+
 
 .section-list {
     list-style: none;
@@ -395,8 +421,6 @@ nav {
 
 
 
-
-
 .portfolio {
 
     display: flex;
@@ -427,6 +451,27 @@ nav {
     /* Para que a linha não ocupe tudo */
 }
 
+.imgbv {
+    width: 450px;
+    font-size: 5.5rem;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    /* ← aqui está a barrinha */
+    display: inline-block;
+    /* Para que a linha não ocupe tudo */
+}
+
+.projetos img{
+    width: 40%;
+    padding-bottom: 25px;
+}
+
+.contate img {
+    width: 33%;
+    padding-bottom: 50px;
+}
+
 .texto p {
     font-family: 'typewriter', serif;
     font-size: 1.1rem;
@@ -449,7 +494,7 @@ nav {
 }
 
 .imagem {
-  
+
     min-width: 280px;
 }
 
@@ -464,5 +509,296 @@ nav {
     .imagem {
         display: none;
     }
-    
+
+}
+
+
+/* ............... SOBRE ................ */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    gap: 30px;
+}
+
+.right {
+    flex: 1;
+    padding: 0 60px;
+    border-left: 2px solid #d9cfc2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5rem;
+    color: #e94f3a;
+    margin-bottom: 10px;
+}
+
+.item {
+    margin-bottom: 12px;
+}
+
+.item-title {
+    color: #e94f3a;
+    font-weight: bold;
+}
+
+.star {
+    color: #222;
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #d9cfc2;
+    margin: 30px 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 60px;
+}
+
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+
+.left .imgexperiencias {
+    margin-top: 60px;
+    width: 450px;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .left {
+        padding-left: 0;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        padding: 0;
+        border-left: none;
+        text-align: center;
+    }
+
+    .left .imgexperiencias {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .skills-list {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    width: 360px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+.project-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.project-item:hover .project-hover {
+    opacity: 1;
+}
+
+.project-item p {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.project-description {
+    text-decoration: none !important;
+    /* Force removal of underline */
+    color: #333;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.projects h2 {
+    font-size: 5rem;
+    font-family: 'Klore', serif;
+    color: #e94f37;
+    margin-bottom: 40px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f9a825;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #e94f37;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #e94f37;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #e94f37;
+}
+
+.contact-section h2 {
+    font-size: 4.5rem;
+    font-family: 'Klore', serif;
+    color: #e94f37;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-section h2 {
+        font-size: 3rem;
+    }
+
+    .contact-item {
+        font-size: 1.1rem;
+    }
+
+    .contact-item i {
+        font-size: 1.2rem;
+    }
+
 }
